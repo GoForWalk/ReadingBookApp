@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BookCollectionViewCell: UICollectionViewCell {
     
@@ -27,6 +28,7 @@ class BookCollectionViewCell: UICollectionViewCell {
         
         setTitleLabel(bookTitle: book.bookTitle)
         setRateLabel(bookRate: book.bookRate)
+        getUIImage(urlString: book.bookImageURL)
         
     }
     
@@ -39,19 +41,19 @@ class BookCollectionViewCell: UICollectionViewCell {
     }
     
     func setRateLabel(bookRate: Double) {
-        
         bookRateLabel.text = "\(bookRate)"
         bookRateLabel.textColor = .white
         bookRateLabel.font = .systemFont(ofSize: 12, weight: .light)
         
     }
     
-//        func getUIImage(urlString: String) {
-//
-//            DispatchQueue.global(qos: .default).async {
-//                <#code#>
-//            }
-//
-//        }
+    func getUIImage(urlString: String) {
+        
+        if urlString.isEmpty { return }
+        
+        let imgUrl = URL(string: urlString)
+        bookImageView.kf.setImage(with: imgUrl)
+        
+    }
     
 }

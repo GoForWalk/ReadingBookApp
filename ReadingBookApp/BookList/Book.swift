@@ -20,7 +20,7 @@ struct Book {
 struct BookDB {
     
     var BookList: [Book] = [
-        Book(bookTitle: "aaaaa", bookImageURL: ""),
+        Book(bookTitle: "aaaaa", bookImageURL: "https://bookthumb-phinf.pstatic.net/cover/224/859/22485918.jpg?udate=20220713"),
         Book(bookTitle: "aaaaa", bookImageURL: ""),
         Book(bookTitle: "aaaaa", bookImageURL: ""),
         Book(bookTitle: "aaaaa", bookImageURL: ""),

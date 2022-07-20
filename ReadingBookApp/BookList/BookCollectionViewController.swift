@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class BookCollectionViewController: UICollectionViewController {
 
     private let reuseIdentifier = "BookCollectionViewCell"
@@ -33,7 +32,6 @@ class BookCollectionViewController: UICollectionViewController {
     }
     
     func setCollectionUI() {
-
         let layout = UICollectionViewFlowLayout()
         
         let spacing: CGFloat = 12
@@ -48,7 +46,7 @@ class BookCollectionViewController: UICollectionViewController {
         layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
         
         collectionView.collectionViewLayout = layout
-        
     }
-
+    
+    
 }

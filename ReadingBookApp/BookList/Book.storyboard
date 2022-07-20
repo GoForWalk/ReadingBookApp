@@ -38,10 +38,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Fek-Y0-oRQ">
-                                            <rect key="frame" x="67.5" y="44.5" width="83.5" height="103.5"/>
+                                            <rect key="frame" x="67.5" y="44.5" width="83.5" height="111.5"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENY-Bs-m6S">
-                                            <rect key="frame" x="12" y="127" width="41.5" height="21"/>
+                                            <rect key="frame" x="12" y="126" width="41.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -51,12 +51,12 @@
                                         <constraint firstItem="Fek-Y0-oRQ" firstAttribute="width" secondItem="fhv-oh-7Kd" secondAttribute="height" multiplier="1:1.9" id="2Zp-8m-Kic"/>
                                         <constraint firstAttribute="trailing" secondItem="eDG-6P-qUw" secondAttribute="trailing" constant="12" id="ABw-sX-tPW"/>
                                         <constraint firstAttribute="trailing" secondItem="Fek-Y0-oRQ" secondAttribute="trailing" constant="12" id="Iz3-5X-743"/>
-                                        <constraint firstItem="ENY-Bs-m6S" firstAttribute="bottom" secondItem="Fek-Y0-oRQ" secondAttribute="bottom" id="Y4l-Ps-eL8"/>
                                         <constraint firstItem="ENY-Bs-m6S" firstAttribute="leading" secondItem="fhv-oh-7Kd" secondAttribute="leading" constant="12" id="a2a-wd-ZRr"/>
                                         <constraint firstItem="Fek-Y0-oRQ" firstAttribute="top" secondItem="eDG-6P-qUw" secondAttribute="bottom" constant="8" id="gVD-Jn-3ZH"/>
-                                        <constraint firstItem="Fek-Y0-oRQ" firstAttribute="height" secondItem="fhv-oh-7Kd" secondAttribute="height" multiplier="0.65" id="hMh-VV-FB1"/>
+                                        <constraint firstItem="Fek-Y0-oRQ" firstAttribute="height" secondItem="fhv-oh-7Kd" secondAttribute="height" multiplier="0.7" id="hMh-VV-FB1"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Fek-Y0-oRQ" secondAttribute="bottom" constant="2" id="iYB-2I-dmh"/>
                                         <constraint firstItem="eDG-6P-qUw" firstAttribute="leading" secondItem="fhv-oh-7Kd" secondAttribute="leading" constant="12" id="pEf-ER-nNQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="ENY-Bs-m6S" secondAttribute="bottom" constant="12" id="tKD-yr-1Yw"/>
                                         <constraint firstItem="eDG-6P-qUw" firstAttribute="top" secondItem="fhv-oh-7Kd" secondAttribute="top" constant="16" id="vbu-pH-x4i"/>
                                     </constraints>
                                 </collectionViewCellContentView>
