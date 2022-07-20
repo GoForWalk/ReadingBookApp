@@ -29,7 +29,7 @@ class BookCollectionViewCell: UICollectionViewCell {
         
         setTitleLabel(bookTitle: book.bookTitle)
         setRateLabel(bookRate: book.bookRate)
-        
+        setImage(urlString: book.bookImageURL)
     }
     
     func setTitleLabel(bookTitle: String){
@@ -44,6 +44,11 @@ class BookCollectionViewCell: UICollectionViewCell {
         bookRateLabel.text = "\(bookRate)"
         bookRateLabel.textColor = .white
         bookRateLabel.font = .systemFont(ofSize: 12, weight: .light)
+        
+    }
+    
+    func setImage(urlString: String) {
+        bookImageView.kf.setImage(with: URL(string: urlString))
         
     }
         

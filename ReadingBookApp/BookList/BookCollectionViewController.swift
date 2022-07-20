@@ -24,10 +24,11 @@ class BookCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        print(#function)
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? BookCollectionViewCell else { return UICollectionViewCell() }
         
         cell.configureCell(bookDB: db, indexPath: indexPath)
-        cell.bookImageView.kf.setImage(with: URL(string: db.BookList[indexPath.row].bookImageURL))
                 
         return cell
     }
