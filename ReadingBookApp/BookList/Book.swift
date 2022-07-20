@@ -36,7 +36,13 @@ struct BookDB {
         Book(bookTitle: "aaaaa", bookImageURL: ""),
         Book(bookTitle: "aaaaa", bookImageURL: ""),
         Book(bookTitle: "aaaaa", bookImageURL: ""),
+        Book(bookTitle: "aaaaa", bookImageURL: ""),
+        Book(bookTitle: "aaaaa", bookImageURL: ""),
+        Book(bookTitle: "aaaaa", bookImageURL: ""),
+        Book(bookTitle: "aaaaa", bookImageURL: ""),
+        Book(bookTitle: "aaaaa", bookImageURL: ""),
+        Book(bookTitle: "aaaaa", bookImageURL: ""),
+        Book(bookTitle: "aaaaa", bookImageURL: ""),
         Book(bookTitle: "aaaaa", bookImageURL: "")
-        
     ]
 }

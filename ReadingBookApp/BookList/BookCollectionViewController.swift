@@ -27,6 +27,7 @@ class BookCollectionViewController: UICollectionViewController {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? BookCollectionViewCell else { return UICollectionViewCell() }
         
         cell.configureCell(bookDB: db, indexPath: indexPath)
+        cell.bookImageView.kf.setImage(with: URL(string: db.BookList[indexPath.row].bookImageURL))
                 
         return cell
     }

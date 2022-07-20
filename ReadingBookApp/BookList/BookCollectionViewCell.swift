@@ -19,6 +19,7 @@ class BookCollectionViewCell: UICollectionViewCell {
     ]
     
     func configureCell(bookDB: BookDB, indexPath: IndexPath) {
+        print(#function + " \(indexPath.row) 번째")
         
         self.backgroundColor = colorList.randomElement()
         self.layer.cornerRadius = 12
@@ -28,7 +29,6 @@ class BookCollectionViewCell: UICollectionViewCell {
         
         setTitleLabel(bookTitle: book.bookTitle)
         setRateLabel(bookRate: book.bookRate)
-        getUIImage(urlString: book.bookImageURL)
         
     }
     
@@ -46,14 +46,5 @@ class BookCollectionViewCell: UICollectionViewCell {
         bookRateLabel.font = .systemFont(ofSize: 12, weight: .light)
         
     }
-    
-    func getUIImage(urlString: String) {
         
-        if urlString.isEmpty { return }
-        
-        let imgUrl = URL(string: urlString)
-        bookImageView.kf.setImage(with: imgUrl)
-        
-    }
-    
 }
