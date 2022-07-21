@@ -14,7 +14,7 @@ class BookDetailWebSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "Book Detail"
+        navigationItem.title = "Book Web Search"
     }
     
 }

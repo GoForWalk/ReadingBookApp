@@ -13,7 +13,7 @@ class BookDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Web Search"
+        navigationItem.title = "Book Detail"
     }
     
     @IBAction func searchWebButtonTapped(_ sender: UIButton) {
