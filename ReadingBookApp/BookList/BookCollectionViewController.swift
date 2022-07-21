@@ -9,13 +9,14 @@ import UIKit
 
 class BookCollectionViewController: UICollectionViewController {
 
-    private let reuseIdentifier = "BookCollectionViewCell"
+    static let identifier = "BookCollectionViewController"
 
     var db: BookDB = BookDB()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollectionUI()
+        setNavigationBar()
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -26,7 +27,7 @@ class BookCollectionViewController: UICollectionViewController {
         
         print(#function)
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? BookCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookCollectionViewCell.identifier, for: indexPath) as? BookCollectionViewCell else { return UICollectionViewCell() }
         
         cell.configureCell(bookDB: db, indexPath: indexPath)
                 
@@ -50,5 +51,28 @@ class BookCollectionViewController: UICollectionViewController {
         collectionView.collectionViewLayout = layout
     }
     
+    func setNavigationBar() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(presentSearchViewController))
+    }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let vc = UIStoryboard(name: "Book", bundle: nil).instantiateViewController(withIdentifier: BookDetailViewController.identifier)
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc
+    func presentSearchViewController() {
+        
+        let sb = UIStoryboard(name: "Book", bundle: nil)
+        
+        let vc = sb.instantiateViewController(withIdentifier: SearchBookTableViewController.identifier)
+        
+        let nv = UINavigationController(rootViewController: vc)
+        
+        nv.modalPresentationStyle = .fullScreen
+        
+        present(nv, animated: true)
+    }
 }

@@ -10,6 +10,8 @@ import Kingfisher
 
 class BookCollectionViewCell: UICollectionViewCell {
     
+    static let identifier = "BookCollectionViewCell"
+    
     @IBOutlet weak var bookTitleLabel: UILabel!
     @IBOutlet weak var bookImageView: UIImageView!
     @IBOutlet weak var bookRateLabel: UILabel!
@@ -33,7 +35,6 @@ class BookCollectionViewCell: UICollectionViewCell {
     }
     
     func setTitleLabel(bookTitle: String){
-        
         bookTitleLabel.text = bookTitle
         bookTitleLabel.textColor = .white
         bookTitleLabel.font = .systemFont(ofSize: 24, weight: .semibold)
